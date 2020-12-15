@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: cornflowerblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.inputs {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.inputs > div {
+  min-height: 67px;
+  display: flex;
+  justify-content: flex-end;
+
+  word-break: break-all;
+}
+
+.second-input {
+  font-size: 35px;
+  color: rgb(56, 232, 238);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  height: 90px;
+  background-color: #eee;
+  font-size: 30px;
+  border: none;
+  border: 1px solid #333;
+  outline: none;
+}
+
+.btn.clear {
+  grid-column: 1 / 3;
+  width: 100%;
+}
+
+.btn.equal {
+  grid-column: 3 / -1;
+  width: 100%;
+}
+
+.operator {
+  background-color: darkorange;
+  color: #fff;
+}
+
+.btn:nth-child(1) {
+  border-left: none;
+}
+
+.btn:nth-last-child(1) {
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.btn:nth-last-child(2) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.btn:nth-last-child(3) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.btn:nth-last-child(4) {
+  border-left: none;
+  border-bottom: none;
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    width: 90%;
+    min-width: 300px;
+    max-width: 400px;
+  }
+
+  .buttons .btn {
+    width: auto;
+  }
+}
